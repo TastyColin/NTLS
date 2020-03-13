@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8"><meta name="theme-color" content="#ffffff">
+  <title>NTPS</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Présentation">
+  <link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+
+<body>
+  
+  <header class="header">
+    <div class="header-content row">
+      
+      <div class="column">
+        <div class="header-title">
+        Nouvelle Technologies de Positionnement Spatial
+      </div>
+      </div>
+    
+      <div class="column">
+        <div class="nav-content">
+          <a href="../index.html"><button class="button button-nav">Accueil</button></a>
+          <a href="./presentation.html"><button class="button button-nav">A propos</button></a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section>
+  	<div class="section">
+	    <div class="section-title red">
+	      <h1>Wifi, bluetooth, ce que votre smartphone utilise vraiment</h1>
+        <p class="right" style="color:#ddd;">publié le 14 février 2020 <em>(Innovation)</em></p>
+	    </div>
+
+	    <div class="section-content">
+        <div class="content-img-container">
+          <img src="../img/logo_wifi_bluetooth.jpg" alt="logo wifi bluetooth" class="content-img">
+        </div>
+	      
+        <h2>Les alternatives utilisées par les smartphones</h2>
+
+        <p>
+          Pour comprendre comment nos smartphone parviennent à nous localiser même en environnement urbain, il suffit d'aller voir dans leurs paramètres.
+        </p>
+        <div class="row">
+          <div class="column">
+            <img src="../img/parametre_loc1.png" alt="Capture d'écran des différents modes de positionnement" class="content-img small">
+            <p class="source">Capture d'écran des différents modes de positionnement accessibles sur un Samsung Galaxy A2017</p>
+          </div>
+          <div class="column">
+            <img src="../img/parametre_loc2.png" alt="Illustration de la disponibilité des satellites" class="content-img small">
+            <p class="source">Capture d'écran des méthodes pour "Améliorer la précision" disponibles sur un Samsung Galaxy A2017</p>
+          </div>
+        </div>
+
+        On constate alors que le positionnement se fait également grâce au Wifi, au bluetooth et aux relais téléphoniques. Ces trois méthodes de positionnement reposent sur la même technique.
+
+        <h2>Le positionnement par wifi ou bluetooth, comment ça marche ?</h2>
+
+        <p>
+          Le positionnement par wifi est réaliser par trialatération, c'est-à-dire à partir de mesure de distances. Contrairement aux GNSS qui utilisent le temps de trajet des signaux, le positionnement par wifi repose sur une mesure de puissance.
+        </p>
+
+        <div class="row">
+          <div class="column">
+            <img src="../img/wifi_strength_distance.png" alt="Graphe distance puissance" class="content-img medium">
+            <p class="source">Graphe donnant la puissance reçue par un modem wifi en fonction de la distance (source : <a href="https://ieeexplore.ieee.org/abstract/document/4449717">IEEE A practical path loss model for indoor WiFi positioning enhancement</a>)</p>
+          </div>
+          <div class="column">
+            <p>
+              Plus un récepteur se trouve loin d'une borne wifi ou bluetooth, plus la puissance du signal est faible. La décroissance est quadratique (lorsque l'on double la distance, on divise la puissance par 4). En fonction du type d'émetteur, des tables permettent de donner la correspondance entre puissance et distance (comme par exemple sur le graphe ci-contre).
+            </p>
+          </div>
+        </div>
+
+        <p>
+          Une fois les distances déduites des puissances, on applique les mêmes algorithmes que ceux du GNSS. Cette technique ne permet d'obtenir que des précisions médiocres (environ 5 mètres) et ne sont pas très robustes. Si des obstacles se trouvent entre le récepteur et la borne, la puissance va être fortement diminuée ce qui va fausser d'autant la mesure. Cependant elles sont trés utilisées en complément des GNSS et en intérieur (où les GNSS ne fonctionnent pas).
+        </p>
+        
+        <h2>Une application : le service à table de MC Donald's</h2>
+
+        <p>
+          Depuis 2017, la chaine de restauration rapide américaine propose de servir ces clients à table. Pour ce faire, ils commandent à des bornes automatiques, récupèrent un chevalet qu'ils posent sur leur table puis les serveurs apportent leur commande.
+        </p>
+
+        <div class="row">
+          <div class="column">
+            <p>
+              Ces chevalets sont équipés d'un récepteur bluetooth. Le restaurant est quadrillé de balises émettrices qui servent de points de repère. Les serveurs savent ainsi directement où se trouvent les clients. Pour vous rendre compte de ce phénomène, lancer une découverte des appareils bluetooth lorsque vous passerez à proximiter d'un MC Donald's.
+            </p>
+          </div>
+          <div class="column">
+            <img src="../img/service_a_table.jpg" alt="Chevalet service à table MC Donald's" class="content-img medium">
+            <p class="source">Source image : <a href="https://www.mcdonalds.fr">MC Donald's France</a></p>
+          </div>
+        </div>
+
+	    </div>
+	  </div>
+
+  </section>
+
+  
+
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        Projet NTIC, <em>Colin CROS</em>, 2020
+      </div>
+    </div>
+  </footer>
+
+ </body></html>
