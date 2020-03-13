@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8"><meta name="theme-color" content="#ffffff">
+  <title>NTPS</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Présentation">
+  <link rel="stylesheet" type="text/css" href="../main.css">
+</head>
+
+<body>
+  
+  <header class="header">
+    <div class="header-content row">
+      
+      <div class="column">
+        <div class="header-title">
+        Nouvelle Technologies de Positionnement Spatial
+      </div>
+      </div>
+    
+      <div class="column">
+        <div class="nav-content">
+          <a href="../index.html"><button class="button button-nav">Accueil</button></a>
+          <a href="./presentation.html"><button class="button button-nav">A propos</button></a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section>
+  	<div class="section">
+	    <div class="section-title blue">
+	      <h1>Le GPS ne fonctionne pas en ville...</h1>
+        <p class="right" style="color:#ddd;">publié le 07 février 2020 <em>(Fun fact)</em></p>
+	    </div>
+
+	    <div class="section-content">
+        <div class="content-img-container">
+          <img src="../img/City_illustration.png" alt="Skyline" class="content-img">
+          <p class="source">Source image : <a href="https://unsplash.com/photos/ZGjbiukp_-A">unsplash</a> (open source)</p>
+        </div>
+	      
+        <h2>Le positionnement en ville</h2>
+        <p>
+          Les villes et en particulier les métropoles forment des environnements dans lesquels l'utilisation des GNSS devient très difficile. Les rues étroites, les bâtiments élevés, les façades vitrées sont des entraves au positionnement précis.
+        </p>
+        <p>
+          Dans les centres-villes, trois phénomènes apparaissent : les multitrajets, l'ombrage et une dégradation de la géométrie. Tous trois influent sur les mesures de pseudo-distances entre le récepteur et le satellite.
+        </p>
+
+        <h2>Les multitrajets et l'ombrage</h2>
+
+        <div class="row">
+          <div class="column">
+            <p>
+              En environnement dégagé, le satellite est visible du récepteur, c'est-à-dire qu'il n'y a pas d'obstacle entre le récepteur et le satellite. Cependant, lorsque l'environnement se densifie, des obstacles peuvent venir briser la liaison, on parle d'ombrage. Dans des applications de navigation, l'environnement change rapidement et les satellites sont tantôt visibles (on parle de <em>Line of Sight</em>, LoS), tantôt ombrés (on parle de <em>shadowing</em> ou <em>None Line of Sight</em>, NLoS). L'ombrage engendre donc une baisse de la disponibilité des satellites, donc une baisse de la précision.
+            </p>
+          </div>
+          <div class="column">
+            <img src="../img/LOS_NLOS_MP.png" alt="Illustration de la disponibilité des satellites" class="content-img medium">
+            <p class="source">Différentes configurations possibles des satellites</p>
+          </div>
+        </div>
+
+        <p>
+          A cet ombrage, s'ajoute un problème plus complexe qui est celui des multi-trajets. Les signaux GNSS peuvent être réfléchis et réfractés au contact de surfaces (notamment vitrée) ou d'arêtes de bâtiments. Le récepteur reçoit des signaux indirects qui ont subi une ou plusieurs réflexions. En conséquence, le temps de trajet et donc la distance parcourue sont donc plus grands. L'estimation de la position est donc faussée.
+        </p>
+
+        <h2>La mauvaise géométrie</h2>
+
+        <p>
+          La géométrie du positionnement des satellites influe sur la précision du positionnement. Les mesures ne sont pas exactes, il y a une zone de confiance centrée sur la valeur mesurée. Le point se situe dans l'intersection de ces zones de confiance.
+        </p>
+        <p>
+          Si les satellites sont relativement éloignés dans le ciel, les zones de confiance s'intersectent et forme un cube. Si par contre, les satellites sont proches dans le ciel, la zone d'intersection est très étendue et l'erreur est plus grande. Les figures ci-dessous illustrent ce phénomène en 2D.
+        </p>
+        <div class="row">
+          <div class="column center">
+            <img src="../img/Good_DOP_illustration.png" alt="Bonne configuration géométrique" class="content-img medium">
+            <p class="source">Configuration optimale, la zone de certitude est quasi cubique</p>
+          </div>
+          <div class="column center">
+            <img src="../img/Bad_DOP_illustration.png" alt="Mauvaise configuration géométrique" class="content-img medium">
+            <p class="source">Mauvaise configuaration, la zone de confiance est étendue</p>
+          </div>
+        </div>
+
+        <p>
+          En ville, les rues imposent d'avoir des satellites plus élevés dans le ciel et alignés avec l'axe de la rue. Dans ces conditions, les satellites sont donc proches, la précision est déteriorée.
+        </p>
+
+	    </div>
+	  </div>
+
+  </section>
+
+  <section>
+    <div class="section">
+      <div class="section-next-article">
+        <h2>Article suivant :</h2>
+        <p>"Wifi, bluetooth, ce que Google utilise vraiment"</p>
+        <div class="row center">
+          <div class="column">
+          <a href="#"><button class="button button-next-article">
+            Retour en haut
+          </button></a>
+          </div>
+          <div class="column">
+          <a href="./wifi_bluetooth_etc.html"><button class="button button-next-article red">
+            Poursuivre la lecture
+          </button></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-content">
+        Projet NTIC, <em>Colin CROS</em>, 2020
+      </div>
+    </div>
+  </footer>
+
+ </body></html>
