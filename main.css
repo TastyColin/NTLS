@@ -62,8 +62,14 @@ html {
 	text-align: right;
 }
 
+.table {
+	display: table;
+	width: 100%;
+}
+
 .row {
 	display:table-row;
+	text-align: center;
 }
 
 
@@ -286,7 +292,7 @@ section {
 
 .content-img
 {
-	max-width: 400px;
+	max-width: 600px;
 	width: 100%;
 	display: block;
 	margin-left: auto;
