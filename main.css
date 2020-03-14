@@ -80,6 +80,10 @@ html {
   clear: both;
 }
 
+.column>p:not(.source) {
+	text-align: justify;
+}
+
 a > button{
 	margin: 0;
 }

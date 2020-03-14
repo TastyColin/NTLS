@@ -31,7 +31,7 @@
   	<div class="section">
 	    <div class="section-title purple">
 	      <h1>Les différents GNSS</h1>
-        <p class="right" style="color:#ddd;">publié le 24 janvier 2020 <em>(Histoirique)</em></p>
+        <p class="right" style="color:#ddd;">publié le 24 janvier 2020 <em>(Historique)</em></p>
 	    </div>
 
 	    <div class="section-content">
@@ -46,7 +46,7 @@
         <h2>Les principaux GNSS</h2>
         
         <p>
-          Les GNSS offrent des avantages stratégiques tant militaire qu'économique, c'est pourquoi chaque puissance développe son propre système. Jusqu'en 2000, le GPS faussait volontairement les données envoyées par la version publique du système pour limiter les performances, lui octroyant un avantage stratégique (l'armée américaine disposant de clefs pour supprimer ces biais).
+          Les GNSS offrent des avantages stratégiques tant militaires qu'économiques, c'est pourquoi chaque puissance développe son propre système. Jusqu'en 2000, le GPS faussait volontairement les données envoyées par la version publique du système pour en limiter les performances, lui octroyant un avantage stratégique (l'armée américaine disposant de clefs pour supprimer ces biais).
           Plus d'info <a href="https://gisgeography.com/selective-availability-gps/">ici</a>.
         </p>
 
@@ -79,7 +79,7 @@
         <div class="row">
           <div class="column">
             <p>
-              Galileo est le GNSS européen. Le programme a été lancé 1999 par l'agence spatiale européenne, l'ESA, afin de se libérer de la dépendance au système américain. Il est opérationnel depuis 2016 grâce à 30 satellites placés en orbite moyenne à près de 23 000 km d'altitude (soit au dessus du GPS). Sa précision est légérement meilleure que celle du GPS, et le système intègre des fonctionnalité supplémentaire comme la possibilité d'utiliser les satellites pour envoyer un signal de détresse peu importe l'endroit du globe.
+              Galileo est le GNSS européen. Le programme a été lancé 1999 par l'agence spatiale européenne, l'ESA, afin de se libérer de la dépendance au système américain. Il est opérationnel depuis 2016 grâce à 30 satellites placés en orbite moyenne à près de 23 000 km d'altitude (soit au dessus du GPS). Sa précision est légérement meilleure que celle du GPS, et le système intègre des fonctionnalités supplémentaires comme la possibilité d'utiliser les satellites pour envoyer un signal de détresse peu importe l'endroit du globe.
             </p>
           </div>
           <div class="column">
@@ -97,7 +97,7 @@
           </div>
           <div class="column">
             <p>
-          BeiDou est le système de navigation chinois. Il a la spécificité d'utiliser 2 constellations de satellites. Initialement, il n'utilisait que des satellites couvrant la chine et les régions avoisinantes. Depuis 2011, une deuxième constellation couvre la totalité du globe grâce à des satellites en orbite moyenne à un peu plus de 21 000 km d'altitude. Ce système est particulière précis en Asie et un peu moins dans le reste du monde.
+          BeiDou est le système de navigation chinois. Il a la spécificité d'utiliser 2 constellations de satellites. Initialement, il n'utilisait que des satellites couvrant la Chine et ses régions avoisinantes. Depuis 2011, une deuxième constellation couvre la totalité du globe grâce à des satellites en orbite moyenne à un peu plus de 21 000 km d'altitude. Ce système est particulière précis en Asie et un peu moins dans le reste du monde.
         </p>
           </div>
         </div>
@@ -112,7 +112,7 @@
         <h3>Principe de base</h3>
 
         <p>
-          Les algorithmes de positionnement par satellite reposent sur de la trilatération, ce qui signifie que l'on se positionne grâce à des mesures de distances. L'idée fondamentale est qu'en connaissant les distances qui nous éloignent de 3 satellites et leurs positions respectives, on est capable se positionner. Il suffit de chercher le point de l'espace à l'intersection de 3 sphères (ou en résolvant un problème d'optimisation si il y en a plus).
+          Les algorithmes de positionnement par satellites reposent sur de la trilatération, ce qui signifie que l'on se positionne grâce à des mesures de distances. L'idée fondamentale est qu'en connaissant les distances qui nous éloignent de 3 satellites et leurs positions respectives, on est capable se positionner. Il suffit de chercher le point de l'espace à l'intersection de 3 sphères (ou en résolvant un problème d'optimisation si il y en a plus).
         </p>
         <p>
           Pour connaître la position des satellites, il suffit de décoder les trames qu'ils émettent continuellement, chaque système suit ses propres standards, donc on ne rentrera pas ici dans les détails. Pour la mesure de distance, c'est beaucoup moins simple...
@@ -123,7 +123,7 @@
           Pour mesurer une distance le plus simple est d'utiliser les temps de trajet. Il est bien connu que la distance parcourue est le produit de la vitesse et de la durée du trajet. Les satellites indiquent à quelle date leurs signaux sont émis. A partir cette date d'émission et de la date de réception on peut déduire le temps de trajet. En réalité, pas tout à fait !
         </p>
         <p>
-          Les horloges des satellites sont toutes synchronisées entre elles grâce à différents mécanismes comme des horloges atomiques (4 par satellites). L'heure d'émission est donc exacte (ou du moins avec une erreur bien inférieure à la nanoseconde). Par contre, il n'y a absolument aucune raison pour que le récepteur possède la même précision sur son horloge. En effet il est inenvisageable de placer des horloges atomiques dans nos smartphones. Il y a donc un décallage entre l'horloge de l'émetteur et celle du récepteur. Les signaux se propageant à la vitesse de la lumière, 1 nanoseconde engendre 30 centimètres d'erreur ! Ce biais doit être corrigé, sans quoi, le positionnement sera très imprécis.
+          Les horloges des satellites sont toutes synchronisées entre elles grâce à différents mécanismes comme des horloges atomiques (4 par satellites). L'heure d'émission est donc exacte (ou du moins avec une erreur bien inférieure à la nanoseconde). Par contre, il n'y a absolument aucune raison pour que le récepteur possède la même précision sur son horloge. En effet, il est inenvisageable de placer des horloges atomiques dans nos smartphones. Il y a donc un décallage entre l'horloge de l'émetteur et celle du récepteur. Les signaux se propageant à la vitesse de la lumière, 1 nanoseconde engendre 30 centimètres d'erreur ! Ce biais doit être corrigé, sans quoi, le positionnement sera très imprécis.
         </p>
         <p>
           Pour supprimer cette inconnue supplémentaire, le décallage d'horloge, il faut utiliser un quatrième satellite. Les systèmes GNSS font plus que vous positionner, ils permettent de synchroniser les horloges de vos appareils.
@@ -146,7 +146,7 @@
           </button></a>
           </div>
           <div class="column">
-          <a href="./le_GPS_ne_fonctionne_pas_en_ville.html"><button class="button button-next-article blue">
+          <a href="./le_GPS_ne_fonctionne_pas_en_ville.html"><button class="button button-next-article red">
             Poursuivre la lecture
           </button></a>
           </div>
